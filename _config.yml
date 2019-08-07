@@ -1,18 +1,18 @@
 # Site settings
-title: Xs-Huxblog
-SEOTitle: Xs-HuxBlog
+title: 智舜的博客
+SEOTitle: Zs Blog
 header-img: img/bg/bg_index.jpg
-email: jsksxs360@163.com
-description: ""
+email: 1075942331@qq.com
+description: "interesting"
 keyword: ""
-url: "https://jsksxs360.github.io"              # your host, for absolute URL
+url: "https://lzs.github.io"              # your host, for absolute URL
 baseurl: "/xs-huxblog"                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # SNS settings
-douban_username: 138483825
-weibo_username: jsksxs360
-zhihu_username: jsksxs360
-github_username: jsksxs360
+douban_username: 
+weibo_username: 
+zhihu_username: 
+github_username: 舜
 
 # Build settings
 # from 2016, 'pygments' is unsupported on GitHub Pages. Use 'rouge' for highlighting instead.
