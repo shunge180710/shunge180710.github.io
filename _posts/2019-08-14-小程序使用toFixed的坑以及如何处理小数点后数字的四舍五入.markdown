@@ -9,6 +9,7 @@ catalog: true
 tags:
     - 说明
 ---
+
 ## 关于toFixed()的知识
 [MDN 文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed)
 
