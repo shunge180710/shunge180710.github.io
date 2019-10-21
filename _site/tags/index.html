@@ -1,313 +1,322 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="interesting" />
+		<meta name="keywords" content="" />
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="interesting">
-    <meta name="keywords"  content="">
-    
-    <title>标签 - Zs Blog</title>
+		<title>标签 - Zs Blog</title>
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/xs-huxblog/img/favicon.ico">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="http://localhost:4000/xs-huxblog/tags/">
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/xs-huxblog/img/favicon.ico" />
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="/xs-huxblog/css/bootstrap.min.css">
+		<!-- Canonical URL -->
+		<link rel="canonical" href="http://localhost:4000/xs-huxblog/tags/" />
 
-    <!-- font-awesome CSS -->
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+		<!-- Bootstrap Core CSS -->
+		<link rel="stylesheet" href="/xs-huxblog/css/bootstrap.min.css" />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="/xs-huxblog/css/hux-blog.min.css">
+		<!-- font-awesome CSS -->
+		<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
 
-    <!-- Highlight CSS -->
-    <link rel="stylesheet" href="/xs-huxblog/css/github.min.css">
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="/xs-huxblog/css/hux-blog.min.css" />
 
-    <!-- ga & ba script hoook -->
-    <script></script>
-</head>
+		<!-- Highlight CSS -->
+		<link rel="stylesheet" href="/xs-huxblog/css/github.min.css" />
 
+		<!-- ga & ba script hoook -->
+		<script></script>
+	</head>
 
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="">
-
-    <!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/xs-huxblog/">智舜的博客</a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/xs-huxblog/">首页</a>
-                    </li>
-                    <li>
-                        <a href="/xs-huxblog/tags">标签</a>
-                    </li>
-                    <li>
-                        <a href="/xs-huxblog/about">关于</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
-
-    var __HuxNav__ = {
-        close: function(){
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        },
-        open: function(){
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-
-    // Bind Event
-    $toggle.addEventListener('click', function(e){
-        if ($navbar.className.indexOf('in') > 0) {
-            __HuxNav__.close()
-        }else{
-            __HuxNav__.open()
-        }
-    })
-
-    /**
-     * Since Fastclick is used to delegate 'touchstart' globally
-     * to hack 300ms delay in iOS by performing a fake 'click',
-     * Using 'e.stopPropagation' to stop 'touchstart' event from 
-     * $toggle/$collapse will break global delegation.
-     * 
-     * Instead, we use a 'e.target' filter to prevent handler
-     * added to document close HuxNav.  
-     *
-     * Also, we use 'click' instead of 'touchstart' as compromise
-     */
-    document.addEventListener('click', function(e){
-        if(e.target == $toggle) return;
-        if(e.target.className == 'icon-bar') return;
-        __HuxNav__.close();
-    })
-</script>
-
-
-    <!-- Page Header -->
-<header class="intro-header" style="background-image: url('/xs-huxblog/img/bg/bg_tag.jpg')">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading" id="tag-heading">
-                    <h1>标签</h1>
-                    <span class="subheading"></span>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Main Content -->
-<div class="container">
-	<div class="row">
-		<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 标签云 -->
-			<div id='tag_cloud' class="tags">
-				
-				<a href="#说明" title="说明" rel="1">说明</a>
-				
-			</div>
-
-            <!-- 标签列表 -->
-			
-			<div class="one-tag-list">
-			  	<span class="fa fa-tag listing-seperator" id="说明">
-                    <span class="tag-text">说明</span>
-                </span>
-				
-				<div class="post-preview">
-				    <a href="/xs-huxblog/2017/02/01/hello-world-2017/">
-				        <h2 class="post-title">
-                            Hello world, 2017
-				        </h2>
-				        
-				        <h3 class="post-subtitle">
-				            欢迎使用
-				        </h3>
-				        
-				    </a>
+	<!-- hack iOS CSS :active style -->
+	<body ontouchstart="">
+		<!-- Navigation -->
+		<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header page-scroll">
+					<button type="button" class="navbar-toggle">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="/xs-huxblog/">智舜的博客</a>
 				</div>
-				<hr>
-				
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div id="huxblog_navbar">
+					<div class="navbar-collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="/xs-huxblog/">首页</a>
+							</li>
+							<li>
+								<a href="/xs-huxblog/tags">标签</a>
+							</li>
+							<li>
+								<a href="/xs-huxblog/about">关于</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- /.navbar-collapse -->
 			</div>
-			
+			<!-- /.container -->
+		</nav>
+		<script>
+			// Drop Bootstarp low-performance Navbar
+			// Use customize navbar with high-quality material design animation
+			// in high-perf jank-free CSS3 implementation
+			var $body = document.body;
+			var $toggle = document.querySelector('.navbar-toggle');
+			var $navbar = document.querySelector('#huxblog_navbar');
+			var $collapse = document.querySelector('.navbar-collapse');
 
+			var __HuxNav__ = {
+				close: function() {
+					$navbar.className = ' ';
+					// wait until animation end.
+					setTimeout(function() {
+						// prevent frequently toggle
+						if ($navbar.className.indexOf('in') < 0) {
+							$collapse.style.height = '0px';
+						}
+					}, 400);
+				},
+				open: function() {
+					$collapse.style.height = 'auto';
+					$navbar.className += ' in';
+				},
+			};
+
+			// Bind Event
+			$toggle.addEventListener('click', function(e) {
+				if ($navbar.className.indexOf('in') > 0) {
+					__HuxNav__.close();
+				} else {
+					__HuxNav__.open();
+				}
+			});
+
+			/**
+			 * Since Fastclick is used to delegate 'touchstart' globally
+			 * to hack 300ms delay in iOS by performing a fake 'click',
+			 * Using 'e.stopPropagation' to stop 'touchstart' event from
+			 * $toggle/$collapse will break global delegation.
+			 *
+			 * Instead, we use a 'e.target' filter to prevent handler
+			 * added to document close HuxNav.
+			 *
+			 * Also, we use 'click' instead of 'touchstart' as compromise
+			 */
+			document.addEventListener('click', function(e) {
+				if (e.target == $toggle) return;
+				if (e.target.className == 'icon-bar') return;
+				__HuxNav__.close();
+			});
+		</script>
+
+		<!-- Page Header -->
+		<header class="intro-header" style="background-image: url('/xs-huxblog/img/bg/bg_tag.jpg')">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+						<div class="site-heading" id="tag-heading">
+							<h1>标签</h1>
+							<span class="subheading"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main Content -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+					<!-- 标签云 -->
+					<div id="tag_cloud" class="tags">
+						<a href="#说明" title="说明" rel="1">说明</a>
+					</div>
+
+					<!-- 标签列表 -->
+
+					<div class="one-tag-list">
+						<span class="fa fa-tag listing-seperator" id="说明">
+							<span class="tag-text">说明</span>
+						</span>
+
+						<div class="post-preview">
+							<a href="/xs-huxblog/2017/02/01/hello-world-2017/">
+								<h2 class="post-title">
+									Hello world, 2017
+								</h2>
+
+								<h3 class="post-subtitle">
+									欢迎使用
+								</h3>
+							</a>
+						</div>
+						<hr />
+					</div>
+				</div>
+			</div>
 		</div>
-	</div>
-</div>
 
+		<!-- Footer -->
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+						<ul class="list-inline text-center">
+							<!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
 
-    <!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <ul class="list-inline text-center">
-                    <!-- add Weibo, Zhihu by Hux, add target = "_blank" to <a> by Hux -->
-                    
-                    
-                    
-                    <li>
-                        <a target="_blank" href="https://github.com/舜">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; 智舜的博客 2019
-                </p>
-            </div>
-        </div>
-    </div>
-</footer>
+							<li>
+								<a target="_blank" href="https://github.com/舜">
+									<span class="fa-stack fa-lg">
+										<i class="fa fa-circle fa-stack-2x"></i>
+										<i class="fa fa-github fa-stack-1x fa-inverse"></i>
+									</span>
+								</a>
+							</li>
+						</ul>
+						<p class="copyright text-muted">
+							Copyright &copy; 智舜的博客 2019
+						</p>
+					</div>
+				</div>
+			</div>
+		</footer>
 
-<!-- MathJax -->
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-</script>
-<script type="text/javascript" async
-  src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
-</script>
+		<!-- MathJax -->
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script
+			type="text/javascript"
+			async
+			src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"
+		></script>
 
-<!-- jQuery -->
-<script src="/xs-huxblog/js/jquery.min.js "></script>
+		<!-- jQuery -->
+		<script src="/xs-huxblog/js/jquery.min.js "></script>
 
-<!-- Bootstrap Core JavaScript -->
-<script src="/xs-huxblog/js/bootstrap.min.js "></script>
+		<!-- Bootstrap Core JavaScript -->
+		<script src="/xs-huxblog/js/bootstrap.min.js "></script>
 
-<!-- Custom Theme JavaScript -->
-<script src="/xs-huxblog/js/hux-blog.min.js "></script>
+		<!-- Custom Theme JavaScript -->
+		<script src="/xs-huxblog/js/hux-blog.min.js "></script>
 
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
+		<!-- async load function -->
+		<script>
+			function async(u, c) {
+				var d = document,
+					t = 'script',
+					o = d.createElement(t),
+					s = d.getElementsByTagName(t)[0];
+				o.src = u;
+				if (c) {
+					o.addEventListener(
+						'load',
+						function(e) {
+							c(null, e);
+						},
+						false
+					);
+				}
+				s.parentNode.insertBefore(o, s);
+			}
+		</script>
 
-<!-- Highlight.js -->
-<script>
-    async("//cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js", function(){
-        hljs.initHighlightingOnLoad();
-    })
-</script>
+		<!-- Highlight.js -->
+		<script>
+			async('//cdn.bootcss.com/highlight.js/9.13.1/highlight.min.js', function() {
+				hljs.initHighlightingOnLoad();
+			});
+		</script>
 
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async('/xs-huxblog/js/jquery.tagcloud.js',function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
+		<!-- jquery.tagcloud.js -->
+		<script>
+			// only load tagcloud.js in tag.html
+			if ($('#tag_cloud').length !== 0) {
+				async('/xs-huxblog/js/jquery.tagcloud.js', function() {
+					$.fn.tagcloud.defaults = {
+						//size: {start: 1, end: 1, unit: 'em'},
+						color: { start: '#bbbbee', end: '#0085a1' },
+					};
+					$('#tag_cloud a').tagcloud();
+				});
+			}
+		</script>
 
-<!--fastClick.js -->
-<script>
-    async("//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
+		<!--fastClick.js -->
+		<script>
+			async('//cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.min.js', function() {
+				var $nav = document.querySelector('nav');
+				if ($nav) FastClick.attach($nav);
+			});
+		</script>
 
-<!-- Baidu Push-->
-<script>
-    // do not push in tag.html
-    if($('#tag_cloud').length == 0){
-        (function(){
-            var bp = document.createElement('script');
-            var curProtocol = window.location.protocol.split(':')[0];
-            if (curProtocol === 'https') {
-                bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
-            }
-            else {
-                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-            }
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(bp, s);
-        })();
-    }
-</script>
+		<!-- Baidu Push-->
+		<script>
+			// do not push in tag.html
+			if ($('#tag_cloud').length == 0) {
+				(function() {
+					var bp = document.createElement('script');
+					var curProtocol = window.location.protocol.split(':')[0];
+					if (curProtocol === 'https') {
+						bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+					} else {
+						bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+					}
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(bp, s);
+				})();
+			}
+		</script>
 
-<!-- Baidu Tongji -->
+		<!-- Baidu Tongji -->
 
-<script>
-    // dynamic User by Hux
-    var _baId = '07529a93af5fa9f808261a1318c3aba4';
+		<script>
+			// dynamic User by Hux
+			var _baId = '07529a93af5fa9f808261a1318c3aba4';
 
-    // Originial
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?" + _baId;
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+			// Originial
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement('script');
+				hm.src = '//hm.baidu.com/hm.js?' + _baId;
+				var s = document.getElementsByTagName('script')[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
 
+		<!-- Side Catalog -->
 
-<!-- Side Catalog -->
-
-
-
-<!-- Image to hack wechat -->
-<img src="/xs-huxblog/img/icon_wechat.jpg" width="0" height="0" />
-<!-- Migrate from head to bottom, no longer block render and still work -->
-
-</body>
-
+		<!-- Image to hack wechat -->
+		<img src="/xs-huxblog/img/icon_wechat.jpg" width="0" height="0" />
+		<!-- Migrate from head to bottom, no longer block render and still work -->
+		<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+		<script>
+			L2Dwidget.init({
+				model: {
+					jsonPath: 'https://unpkg.com/live2d-widget-model-miku@1.0.5/assets/miku.model.json',
+					scale: 1,
+				},
+				display: {
+					position: 'left',
+					width: 150,
+					height: 300,
+					hOffset: 0,
+					vOffset: -20,
+				},
+				mobile: { show: true, scale: 0.5 },
+				react: { opacityDefault: 0.7, opacityOnHover: 0.2 },
+			});
+		</script>
+	</body>
 </html>
