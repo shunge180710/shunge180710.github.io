@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "小程序使用toFixed的坑以及如何处理小数点后数字的四舍五入"
-subtitle:   "欢迎使用"
+# subtitle:   "欢迎使用"
 date:       2019-08-14 12:00:00
 author:     "zhishun"
 header-img: "img/bg/hello_world.jpg"
